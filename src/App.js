@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+
 import './App.css';
 import MovieList from './components/MovieList';
 import Filter from './components/Filter';
-
 
 function App() {
   const [films, setFilms] = useState([
@@ -41,7 +41,15 @@ function App() {
    titre: 'Man on Fire ',
          description: 'John W. Creasy, un ex-agent de la CIA devenu alcoolique, se fait engager comme garde du corps par Samuel Ramos, membre dune famille bourgeoise de Mexico empêcher un éventuel rapt de sa fille Pita. Les enlèvements sont en effet monnaie courante dans toute lAmérique latine Le garde du corps au bord du suicide exerce froidement son métier dans un premier temps rejetant la fillette de neuf ans qui cherche en lui un ami.',
     posterURL: 'https://musicart.xboxlive.com/7/d50c1200-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080',
-      note: 3.8,
+      note: 8.8,
+    },
+    {
+      titre: 'Immortale',
+      description: 'John W. Creasy, un ex-agent de la CIA devenu alcoolique, se fait engager comme garde du corps par Samuel Ramos, membre dune famille bourgeoise de Mexico empêcher un éventuel rapt de sa fille Pita. Les enlèvements sont en effet monnaie courante dans toute lAmérique latine Le garde du corps au bord du suicide exerce froidement son métier dans un premier temps rejetant la fillette de neuf ans qui cherche en lui un ami.',
+      posterURL: 'https://fr.web.img4.acsta.net/pictures/21/12/01/11/55/3274106.jpg',
+        note: 7.9,
+  
+
     },
 
   ]);
@@ -61,6 +69,8 @@ function App() {
 
       <MovieList films={films} />
     </div>
+
+
   );
 }
 

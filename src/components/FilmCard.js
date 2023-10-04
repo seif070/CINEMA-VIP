@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const FilmCard = ({ film }) => {
     return (
   
@@ -9,6 +8,7 @@ const FilmCard = ({ film }) => {
       <h2>{film.titre}</h2>
       <p>{film.description}</p>
       <p>Note : {film.note}</p>
+
     </div>
   );
 };
