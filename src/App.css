@@ -38,6 +38,9 @@
     height: auto;
   }
   
+  body {
+    background-color: #181817c4;
+  }
   
   
   
@@ -52,15 +55,48 @@
   }
   
 
-    
-  
-  button {
-    background-color: #a6ff0071; 
-    color: #242323;
-    border: none; 
-    padding: 10px 20px; 
-    cursor: pointer;
-    border-radius: 4px; 
-    font-size: 16px; 
-    transition: background-color 0.3s; 
+  body, ul {
+    margin: 0;
+    padding: 0;
   }
+  header {
+    background-color: #333;
+    color: rgb(209, 14, 14);
+    padding: 10px 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+    font-weight: bold;
+  }
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+             
+  
+ 

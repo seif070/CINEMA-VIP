@@ -1,0 +1,40 @@
+.bg-body-tertiary {
+    background-color: #020202a2;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #f3eded; 
+    font-size: 1rem; 
+    margin-right: 20px;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #ffd700;
+  }
+  
+  .form-control {
+    background-color: #191a19b6;
+    color: #fff;
+    border: none; 
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .form-control::placeholder {
+color: #aaa; 
+ }
+
+.btn-outline-success {
+    color: #fff;
+    border-color: #28a745; 
+    justify-content: center;
+    
+}
+.btn-outline-success:hover {
+background-color: #28a745;
+}

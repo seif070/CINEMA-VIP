@@ -25,8 +25,6 @@ onChange={(e) => setRate(e.target.value)}
 
 />
 
-<button >Ajouter</button>
-<button >Supprimer</button>
 
 </div>
 );
