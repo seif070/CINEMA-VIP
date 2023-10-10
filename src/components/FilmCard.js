@@ -1,6 +1,7 @@
 import React from 'react';
 
 const FilmCard = ({ film }) => {
+
     return (
   
         <div className="film-card">

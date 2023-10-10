@@ -2,13 +2,16 @@ import React from 'react';
 import FilmCard from './FilmCard';
 
 
-const MovieList = ({ films }) => {
+const MovieList = ({ films,title,rate }) => {
     return (
 
         <div className="movie-list">
-        {films.map((film, index) => (
+        {films.filter((el)=> el.titre.toUpperCase().includes(title.toUpperCase().trim()) && el.note>=rate)
+        .map((film, index) => (
           <FilmCard key={index} film={film} />
         ))}
+
+
       </div>
     );
   };

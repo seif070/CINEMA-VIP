@@ -3,15 +3,16 @@ import React, { useState } from 'react';
 import './App.css';
 import MovieList from './components/MovieList';
 import Filter from './components/Filter';
+import Navigation from './components/Navigation';
 
 function App() {
   const [films, setFilms] = useState([
     {
       titre: 'Blow',
-      description: 'Poussé par lappât du gain, un avocat pénal se lance dans le trafic de drogue à la frontière américano-mexicaine. Fiancé à la belle Laura dont il est éperdument amoureux, il rêve de mener grand train avec elle. Il prend alors conseil auprès de Reiner, un ami déjà impliqué dans le trafic de cocaïne, qui lui ouvre les portes du milieu. Lavocat fait la connaissance de Westray, un intermédiaire en relation directe avec les membres du cartel.',
-      
-      posterURL: 'https://m.media-amazon.com/images/I/51ABCZ3C8TL._AC_UF1000,1000_QL80_.jpg',
-      note: 9.5,
+  description: 'Poussé par lappât du gain, un avocat pénal se lance dans le trafic de drogue à la frontière américano-mexicaine. Fiancé à la belle Laura dont il est éperdument amoureux, il rêve de mener grand train avec elle. Il prend alors conseil auprès de Reiner, un ami déjà impliqué dans le trafic de cocaïne, qui lui ouvre les portes du milieu. Lavocat fait la connaissance de Westray, un intermédiaire en relation directe avec les membres du cartel.',
+ 
+ posterURL: 'https://m.media-amazon.com/images/I/51ABCZ3C8TL._AC_UF1000,1000_QL80_.jpg',
+note: 9.5,
     },
 
     {
@@ -31,15 +32,15 @@ function App() {
     },
 
     {
-      titre: 'Gladiator',
-      description: 'Le général romain Maximus est le plus fidèle soutien de lempereur Marc Aurèl il a conduit de victoire en victoire. Jaloux du prestige de Maximus, et plus encore de lamour que lui voue lempereur, le fis de Marc Aurèle, Commode, sarroge brutalemnt le pouvoir puis ordonne larrestation du général et son exécution. Maximus échappe à ses assassins, mais ne peut empêcher le massacre de sa famille. Capturé par un marchand desclaves il devient gladiateur et prépare sa vengeance.',
-        posterURL: 'https://m.media-amazon.com/images/I/61MSIFHAxML._AC_UF894,1000_QL80_.jpg',
-             note: 9.4,
+titre: 'Gladiator',
+description: 'Le général romain Maximus est le plus fidèle soutien de lempereur Marc Aurèl il a conduit de victoire en victoire. Jaloux du prestige de Maximus, et plus encore de lamour que lui voue lempereur, le fis de Marc Aurèle, Commode, sarroge brutalemnt le pouvoir puis ordonne larrestation du général et son exécution. Maximus échappe à ses assassins, mais ne peut empêcher le massacre de sa famille. Capturé par un marchand desclaves il devient gladiateur et prépare sa vengeance.',
+posterURL: 'https://m.media-amazon.com/images/I/61MSIFHAxML._AC_UF894,1000_QL80_.jpg',
+note: 9.4,
     },
 
     {
    titre: 'Man on Fire ',
-         description: 'John W. Creasy, un ex-agent de la CIA devenu alcoolique, se fait engager comme garde du corps par Samuel Ramos, membre dune famille bourgeoise de Mexico empêcher un éventuel rapt de sa fille Pita. Les enlèvements sont en effet monnaie courante dans toute lAmérique latine Le garde du corps au bord du suicide exerce froidement son métier dans un premier temps rejetant la fillette de neuf ans qui cherche en lui un ami.',
+description: 'John W. Creasy, un ex-agent de la CIA devenu alcoolique, se fait engager comme garde du corps par Samuel Ramos, membre dune famille bourgeoise de Mexico empêcher un éventuel rapt de sa fille Pita. Les enlèvements sont en effet monnaie courante dans toute lAmérique latine Le garde du corps au bord du suicide exerce froidement son métier dans un premier temps rejetant la fillette de neuf ans qui cherche en lui un ami.',
     posterURL: 'https://musicart.xboxlive.com/7/d50c1200-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080',
       note: 8.8,
     },
@@ -53,6 +54,8 @@ function App() {
     },
 
   ]);
+  const[title,setTitle]=useState('')
+  const[rate,setRate]=useState('')
 
   const addFilm = (film) => {
     setFilms([...films, film]);
@@ -64,11 +67,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>CiNEMA VIP</h1>
-      <Filter onFilter={filterFilms} />
+      <Navigation/>
+<h1>CiNEMA VIP</h1>
+ <Filter setTitle={setTitle}  setRate={setRate}/>
 
-      <MovieList films={films} />
-    </div>
+<MovieList films={films} title={title} rate={rate}/>
+
+</div>
 
 
   );
